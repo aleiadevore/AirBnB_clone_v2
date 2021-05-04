@@ -65,5 +65,5 @@ class FileStorage:
                     return
 
     def close(self):
-        '''Method to deserialize json file to objects'''
+        """ Automatically saves on close """
         self.reload()
