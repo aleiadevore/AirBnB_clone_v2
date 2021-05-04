@@ -109,4 +109,4 @@ class DBStorage:
 
     def close(self):
         '''Method adding remove method to self.__session'''
-        self.__session.close()
+        self.__session.close_all()
