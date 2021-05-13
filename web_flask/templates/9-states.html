@@ -6,7 +6,7 @@
     <BODY>
     {% if states is not iterable %}
         <h1>State: {{ states.name }}</h1>
-        <h2>Cities:</h2>
+        <h3>Cities:</h3>
         <ul>
             {% for city in states.cities | sort(attribute='name') %}
                 <li>{{ city.id }}: <b>{{ city.name }}</b></li>
@@ -18,7 +18,7 @@
         </H1>
         <ul>
                 {% for state in states.values() | sort(attribute='name') %}
-                    <li>State: {{ state.id }}: <b>{{ state.name }}</b>
+                    <li>{{ state.id }}: <b>{{ state.name }}</b>
                     </li>
                 {% endfor %}
         </ul>
