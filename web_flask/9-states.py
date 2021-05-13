@@ -16,9 +16,12 @@ def state_id(id=None):
         if id is None:
                 return render_template(
                         '9-states.html', states=all_states, id=id)
+        state = None
         for instance in all_states.values():
                 if instance.id == id:
                         state = instance
+        if state is None:
+                id = None
         return render_template(
                 '9-states.html', states=state, id=id)
 

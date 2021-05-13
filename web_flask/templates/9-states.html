@@ -4,7 +4,7 @@
         <TITLE>HBNB</TITLE>
     </HEAD>
     <BODY>
-    {% if states is not iterable %}
+    {% if id %}
         <h1>State: {{ states.name }}</h1>
         <h3>Cities:</h3>
         <ul>
@@ -24,6 +24,6 @@
         </ul>
     {% else %}
         <h1>Not found!</h1>
-    {%- endif %}
+    {% endif %}
     </BODY>
 </HTML>
