@@ -13,7 +13,7 @@ app = Flask(__name__)
 def state_id(id=None):
         """ List of cities by state ID """
         all_states = storage.all(State)
-        if id == None:
+        if id is None:
                 return render_template(
                         '9-states.html', states=all_states, id=id)
         for instance in all_states.values():
