@@ -12,12 +12,12 @@ app = Flask(__name__)
 @app.route('/states/<id>', strict_slashes=False)
 def state_id(id=None):
         """ List of cities by state ID """
-        all_states = storage.all(State)
+        all_states = storage.all(State).values()
         if id is None:
                 return render_template(
                         '9-states.html', states=all_states, id=id)
         state = None
-        for instance in all_states.values():
+        for instance in all_states:
                 if instance.id == id:
                         state = instance
         if state is None:
